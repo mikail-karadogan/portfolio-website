@@ -12,7 +12,7 @@ import {
 import { useState } from "react";
 
 const Projects = () => {
-  const [projects, setProjects] = useState<any[]>([{}, {}, {}, {}]);
+  const [projects, _] = useState<any[]>([{}, {}, {}, {}]);
   return (
     <Box sx={{ padding: "50px 0px" }}>
       {projects.length > 0 ? (
@@ -25,7 +25,7 @@ const Projects = () => {
           </Typography>
           <Container sx={{ marginTop: "30px" }}>
             <Grid container spacing={4}>
-              {projects?.map((item: any, index: number) => (
+              {projects?.map((_: any, index: number) => (
                 <Grid item xs={12} sm={6} md={6} lg={4}>
                   <Card sx={{ width: "100%" }} key={index}>
                     <CardMedia
